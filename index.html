@@ -10,11 +10,33 @@
 <body>
 <div class="center-piece">
     <div id="affirmation-block">
-<h1>Welcome.</h1>
-<button type="button">O</button>
+<h1>affirmations</h1>
+<button id="openModalButton" type="button">Add Quotes</button>
+<button id="manageQuotesButton" type="button">Manage Quotes</button>
 <p id="quote"></p>
 <footer id="by"></footer>
-<button type="button" onclick="newQuote();">New Quote</button> 
+<button id="genQuote"type="button" onclick="newQuote();">New Quote</button> 
+</div>
+
+<!--Modal Window-->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Add your own quote here.</h3>
+        <input type="text" id="newQuoteText" placeholder="Enter your affirmations">
+        <input type="text" id="newQuoteBy" placeholder="Enter the author">
+        <button id="addQuoteButton" type="button">Add Quote</button>
+    </div>
+</div>
+
+<!--Manage Quotes Modal-->
+<div id="manageQuotesModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Manage Quotes</h3>
+        <ul id="quotesList"></ul>
+        <button id="deleteQuoteButton" type="button">Delete Selected Quote</button>
+    </div>
 </div>
 </div>
 <script src="script.js" defer></script>
